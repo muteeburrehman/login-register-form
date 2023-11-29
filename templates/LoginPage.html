@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-12 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="text-center">Login</h2>
+              <!-- Login Form -->
+              <form id="loginForm" onsubmit="event.preventDefault(); login()">
+                <!-- Email -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <!-- Password -->
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    <button 
+                    class="btn btn-primary btn-outline-secondary" 
+                    type="button" 
+                    id="eyeIcon" 
+                    onclick="togglePasswordVisibility()">
+                      <img 
+                      src="/images/key.png" 
+                      style="height: 30px;" />
+                    </button>
+                  </div>
+                </div>
+                <!-- Submit -->
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+              </form>
+              <!-- Other signup functionalities -->
+              <div class="mb-3 text-center">
+                <span>Don't have an account? <a href="#">Signup</a></span>
+              </div>
+              
+              <div class="mb-3">
+                <hr>
+              </div>
+    
+              <div class="mb-3 text-center">
+                <a href="#" class="btn btn-facebook">
+                  <img src="/images/facebook.png" 
+                  alt="Facebook Icon" 
+                  class="me-2"
+                  style="height: 30px; "
+                  > Login with Facebook
+                </a>
+                <a href="#" class="btn btn-google">
+                  <img src="/images/google.png"
+                  style="height: 30px; " 
+                  alt="Google Icon" 
+                  class="me-2"> Login with Google
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </body>
+    </html>
